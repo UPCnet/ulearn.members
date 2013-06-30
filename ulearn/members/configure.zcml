@@ -2,12 +2,19 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:five="http://namespaces.zope.org/five"
     xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:grok="http://namespaces.zope.org/grok"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     i18n_domain="ulearn.members">
 
   <five:registerPackage package="." initialize=".initialize" />
 
+  <permission
+    id="ulearn.createusers"
+    title="Ulearn: Create Users"
+    />
+
   <includeDependencies package="." />
+  <grok:grok package="." />
 
   <genericsetup:registerProfile
       name="default"
@@ -16,6 +23,5 @@
       description="Installs the ulearn.members package"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
-  <!-- -*- extra stuff goes here -*- -->
 
 </configure>

@@ -30,6 +30,7 @@ setup(name='ulearn.members',
       zip_safe=False,
       install_requires=[
           'setuptools',
+          'five.grok',
           'dexterity.membrane'
       ],
       extras_require={'test': ['plone.app.testing']},
